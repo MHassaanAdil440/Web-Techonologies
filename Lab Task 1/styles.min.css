@@ -1,0 +1,91 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f2f2f2;
+  }
+
+  .container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  }
+  img{
+    border-radius:50%
+  }
+  .header {
+    text-align: center;
+    background-color: #025464;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+
+  .header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+
+  .header p {
+    margin: 0;
+    font-size: 18px;
+  }
+
+  .section {
+    margin-bottom: 20px;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+
+  .section h2 {
+    color: #333;
+    font-size: 24px;
+  }
+
+  .section p {
+    margin: 0;
+    line-height: 1.6;
+  }
+
+  .section img {
+    max-width: 100%;
+    height: auto;
+    margin-top: 10px;
+  }
+
+  .section ul {
+    list-style-type: disc;
+    margin-left: 20px;
+  }
+  .header {
+    display: flex;
+    align-items: center; /* Vertically center align items */
+    background-color: #016A70;
+    color: #fff;
+    padding: 20px;
+    border-radius: 5px;
+  }
+  
+  .header-content {
+    flex: 1; /* Allow the content to grow and take available space */
+  }
+  
+  .header h1 {
+    margin: 0;
+    font-size: 36px;
+  }
+  
+  .header p {
+    margin: 0;
+    font-size: 18px;
+  }
+  
+  .header img {
+    width: 100px;
+    height: auto;
+    margin-left: 20px; /* Add some spacing between the content and the image */
+  }
+  
