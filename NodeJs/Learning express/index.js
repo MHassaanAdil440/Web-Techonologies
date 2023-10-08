@@ -1,35 +1,24 @@
-const express = require('express');
+const express = require("express");
 const app = express();
 
-app.set('view engine','ejs');
-app.get('/profileyo',(req,res)=>{
-    user = {
-        name:'Hassaan',
-        email:'Hassaanadil488@gmail',
-        country:'Pakistan'
-    }
-    res.render('profile123',{user})
-})
+const ageFilter = (req, res, next) => {
+  if (!req.query.age) {
+    res.send("<h1>Enter Your age.</h1>");
+  } else if (req.query.age > 18) {
+    next();
+  }else if (req.query.age < 18) {
+    res.send("<h1>You are under age.</h1>");
+  } else {
+    res.send("<h1>Enter Your age.</h1>");
+  }
+};
+app.use(ageFilter);
+
+app.get("", (req, res) => {
+  res.send("<h1>Welcome to the Home page</h1>");
+});
+app.get("/about", (req, res) => {
+  res.send("<h1>Welcome to the About page</h1>");
+});
+
 app.listen(8000);
-
-
-// const express = require('express');
-// const path = require('path');
-
-// const app = express();
-
-// app.set('view engine','ejs');
-
-
-// app.get('/profile',(_,resp)=>{
-//     const user={
-//         name:'Peter',
-//         email:'peter@test.com',
-//         country:'USA'
-//     }
-//    resp.render('profile',{user})
-// });
-
-
-
-// app.listen(8000);
