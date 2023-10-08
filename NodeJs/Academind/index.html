@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Amazing Blog</title>
+
+    <!-- Add Bootstrap CSS (You can include from a CDN) -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap/dist/css/bootstrap.min.css">
+
+    <!-- Custom CSS for your landing page -->
+    <style>
+        /* Add your custom styles here */
+        body {
+            background-color: #f8f9fa;
+        }
+
+        .jumbotron {
+            background-image: url('blog-background.jpg'); /* Add a background image */
+            background-size: cover;
+            color: #ffffff;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        .btn-primary {
+            background-color: #007bff;
+            border-color: #007bff;
+        }
+
+        .btn-primary:hover {
+            background-color: #0056b3;
+            border-color: #0056b3;
+        }
+
+        .subscribe-form {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+        }
+
+        .featured-blog {
+            margin-top: 40px;
+        }
+    </style>
+</head>
+<body>
+    <div class="jumbotron text-center">
+        <h1 class="display-4">Welcome to Amazing Blog</h1>
+        <p class="lead">Discover the latest and greatest in the world of blogging.</p>
+        <a class="btn btn-primary btn-lg" href="#" role="button">Explore Blogs</a>
+    </div>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-8">
+                <div class="featured-blog">
+                    <h2>Featured Blog Post</h2>
+                    <img src="featured-blog-image.jpg" alt="Featured Blog Image" class="img-fluid">
+                    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eget justo eu velit dapibus sollicitudin.</p>
+                    <a href="#" class="btn btn-primary">Read More</a>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="subscribe-form">
+                    <h3>Subscribe to Our Newsletter</h3>
+                    <form>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" class="form-control" id="email" placeholder="Enter your email">
+                        </div>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Add Bootstrap JavaScript (You can include from a CDN) -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap/dist/js/bootstrap.min.js"></script>
+</body>
+</html>
