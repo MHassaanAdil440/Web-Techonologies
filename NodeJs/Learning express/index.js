@@ -16,4 +16,8 @@ app.get('/home',(req, res)=>{
     res.sendFile(dir+"/home.html")
 })
 
+app.get("*",(req,res)=>{
+    res.send(404)
+})
+
 app.listen(8000);
