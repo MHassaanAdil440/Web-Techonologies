@@ -1,23 +1,35 @@
 const express = require('express');
-const path = require('path');
 const app = express();
 
-const dir = path.join(__dirname,'public');
-// console.log(dir);
-// app.use(express.static(dir));
-
-app.get('',(req, res)=>{
-    res.sendFile(dir+"/index.html")
+app.set('view engine','ejs');
+app.get('/profileyo',(req,res)=>{
+    user = {
+        name:'Hassaan',
+        email:'Hassaanadil488@gmail',
+        country:'Pakistan'
+    }
+    res.render('profile123',{user})
 })
-app.get('/about',(req, res)=>{
-    res.sendFile(dir+"/about.html")
-})
-app.get('/home',(req, res)=>{
-    res.sendFile(dir+"/home.html")
-})
-
-app.get("*",(req,res)=>{
-    res.send(404)
-})
-
 app.listen(8000);
+
+
+// const express = require('express');
+// const path = require('path');
+
+// const app = express();
+
+// app.set('view engine','ejs');
+
+
+// app.get('/profile',(_,resp)=>{
+//     const user={
+//         name:'Peter',
+//         email:'peter@test.com',
+//         country:'USA'
+//     }
+//    resp.render('profile',{user})
+// });
+
+
+
+// app.listen(8000);
