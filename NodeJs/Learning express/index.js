@@ -1,24 +1,23 @@
-const express = require("express");
+const express = require('express');
 const app = express();
+const reqFilter = require("./middleware");
+const route = express.Router();
 
-const ageFilter = (req, res, next) => {
-  if (!req.query.age) {
-    res.send("<h1>Enter Your age.</h1>");
-  } else if (req.query.age > 18) {
-    next();
-  }else if (req.query.age < 18) {
-    res.send("<h1>You are under age.</h1>");
-  } else {
-    res.send("<h1>Enter Your age.</h1>");
-  }
-};
-app.use(ageFilter);
+route.use(reqFilter);
 
-app.get("", (req, res) => {
-  res.send("<h1>Welcome to the Home page</h1>");
-});
-app.get("/about", (req, res) => {
-  res.send("<h1>Welcome to the About page</h1>");
-});
+app.get('/',(req,res)=>{
+  res.send("<h1>Welcome to HOME page</h1>")
+})
+app.get('/user',(req,res)=>{
+  res.send("<h1>Welcome to USERs page</h1>")
+})
+route.get('/about',(req,res)=>{
+  res.send("<h1>Welcome to ABOUT page</h1>")
+})
+route.get('/dashboard',(req,res)=>{
+  res.send("<h1>Welcome to DASHBOARD page</h1>")
+})
 
-app.listen(8000);
+app.use('/',route);
+
+app.listen(5000);
